@@ -28,17 +28,17 @@ function ContactMe(props) {
 
             <div className='flex  mt-3 '>
                 <div className='px-5 grid-rows-2  justify-center cursor-pointer hover:bg-orange-500 rounded-full py-2' onClick={whatsAppFunction}>
-                    <ImWhatsapp className='ml-5' size={30} />
+                    <ImWhatsapp className='ml-5 text-blue-600' size={30} />
                     <p className='  text-teal-500 font-mono'>WhatsApp</p>
                 </div>
                 <div className=' px-5 grid-rows-2  justify-center  cursor-pointer  hover:bg-orange-500 rounded-full py-2' >
                     <a href="tel:9071872917">
-                        <FiPhoneCall className='ml-5' size={30} />
+                        <FiPhoneCall className='ml-5 text-blue-600' size={30} />
                         <p className=' px-4 text-teal-500 font-mono'>Call</p>
                     </a>
                 </div>
                 <div className=' px-5 grid-rows-2  justify-center cursor-pointer hover:bg-orange-500 rounded-full py-2' onClick={emailFunction}>
-                    <MdEmail className='ml-5' size={30} />
+                    <MdEmail className='ml-5 text-blue-600' size={30} />
                     <p className=' px-2 text-teal-500 font-mono'>Email</p>
                 </div>
             </div>
@@ -48,18 +48,18 @@ function ContactMe(props) {
                 <div className='flex'>
                     <div className='py-3 px-7 rounded-full  hover:bg-orange-500'
                          onClick={()=>{window.open('https://github.com/P00JARY')}}>
-                        <BsGithub className='ml-3' size={30}/>
+                        <BsGithub className='ml-3 text-blue-600' size={30}/>
                         <p className='text-teal-500'>GitHub</p>
                     </div>
                     <div className='py-3 px-5 rounded-full  hover:bg-orange-500'
                          onClick={()=>{window.open('https://www.linkedin.com/in/ashil-b-s/')}}>
-                        <BsLinkedin className='ml-3' size={30}/>
+                        <BsLinkedin className='ml-3 text-blue-600' size={30}/>
                         <p className='text-teal-500'>LinkedIn</p>
                     </div>
 
                     <div className='py-3 px-5 rounded-full  hover:bg-orange-500'
                          onClick={()=>{window.open('https://twitter.com/ashil_poojary')}}>
-                        <FiTwitter className='ml-3' size={30}/>
+                        <FiTwitter className='ml-3 text-blue-600    ' size={30}/>
                         <p className='text-teal-500'>Twitter</p>
                     </div>
 

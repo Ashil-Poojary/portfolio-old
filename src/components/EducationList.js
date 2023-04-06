@@ -4,8 +4,8 @@ import Education from "./Education";
 function EducationList(props) {
     return (
         <div className='bg-gray-700  rounded-3xl justify-start px-2 space-x-1 py-2'>
-            <div className='text-red-600 font-bold font-mono'>
-                Education :
+            <div className="text-black font-bold font-mono bg-blue-400 rounded-full text-center  mb-2">
+                Education
             </div>
             <Education
                 years="2018-2021"

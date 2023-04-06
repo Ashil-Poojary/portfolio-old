@@ -10,7 +10,7 @@ export default function Profile() {
 
     return (
         <div className="flex flex-col items-center min-h-screen bg-teal-600 to-blue-600 ">
-            <div className="w-full max-w-3xl px-6 py-5 bg-gray-800 rounded-3xl shadow-md my-20 h-3/5">
+            <div className="w-full max-w-3xl px-6 py-5 bg-gray-800 rounded-3xl shadow-md my-10 h-3/5">
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12'>
                     <MyProfile/>
                     <ContactMe/>
