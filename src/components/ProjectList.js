@@ -3,13 +3,12 @@ import Projects from "./Projects";
 
 function ProjectList(props) {
     return (
-<<<<<<< HEAD
         <div className='bg-gray-700 rounded-3xl justify-start px-3   pb-4'>
             <div className="text-black font-bold font-mono  bg-blue-400 rounded-full text-center mt-2 ">
-=======
+
         <div className='bg-gray-700 rounded-3xl justify-start px-3 overflow-auto h-96  pb-4'>
             <div className="text-red-600 font-bold font-mono ">
->>>>>>> origin/main
+
                 Projects :
             </div>
             <div className='overflow-auto h-96'>
@@ -48,6 +47,8 @@ function ProjectList(props) {
             />
             </div>
 
+            </div>
+            </div>
         </div>
     );
 }
