@@ -4,7 +4,7 @@ import Projects from "./Projects";
 function ProjectList(props) {
     return (
         <div className='bg-gray-700 rounded-3xl justify-start px-3 overflow-auto h-96  pb-4'>
-            <div className="text-red-600 font-bold font-mono">
+            <div className="text-red-600 font-bold font-mono ">
                 Projects :
             </div>
             <Projects
