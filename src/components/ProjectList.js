@@ -41,6 +41,15 @@ function ProjectList(props) {
                 timeline="March 2021 - July 2021"
                 discription="It is an IOT based system which aims to utilize the features of embedded system to make Gardening easy."
             />
+                <hr className='my-2'/>
+                <Projects
+                    title="About this Project"
+                    role="web Developer"
+                    timeline="March 2023 "
+                    discription="Portfolio Web Application. Using React"
+
+                    code='https://github.com/P00JARY/portfolio'
+                />
             </div>
 
 
