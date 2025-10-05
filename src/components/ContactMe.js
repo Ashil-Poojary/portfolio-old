@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {ImWhatsapp} from "react-icons/im";
 import {FiPhoneCall,FiTwitter} from "react-icons/fi";
 import {MdEmail} from "react-icons/md";
@@ -6,7 +6,6 @@ import {BsLinkedin,BsGithub} from "react-icons/bs";
 import portfolioData from '../data/portfolioData.json';
 
 function ContactMe(props) {
-    const [hoveredItem, setHoveredItem] = useState(null);
     const { contactInfo: contactData } = portfolioData;
 
     function whatsAppFunction() {

@@ -16,11 +16,6 @@ function TopBar() {
         { name: 'Contact', path: '/Home', icon: <FiMail size={18} /> }
     ];
 
-    const handleNavigation = (path) => {
-        navigate(path);
-        setIsMenuOpen(false);
-    };
-
     const scrollToSection = (sectionName) => {
         if (location.pathname === '/Home') {
             // If we're on the dashboard, scroll to the section

@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
-import Projects from "./Projects";
 import portfolioData from '../data/portfolioData.json';
 
 function ProjectList(props) {
-    const [hoveredProject, setHoveredProject] = useState(null);
     const [imageErrors, setImageErrors] = useState({});
     const { projects, statusColors } = portfolioData;
 
@@ -26,15 +24,13 @@ function ProjectList(props) {
                     <div 
                         key={index}
                         className="group relative p-6 border-l-2 border-purple-500/30 pl-8 hover:border-purple-500/60 transition-all duration-300"
-                        onMouseEnter={() => setHoveredProject(index)}
-                        onMouseLeave={() => setHoveredProject(null)}
                     >
                         {/* Status Badge */}
                         <div className="absolute top-4 right-4">
                             <span className={`px-3 py-1 text-xs font-mono rounded-full border ${getStatusColor(project.status)}`}>
                                 {project.status}
                             </span>
-                        </div>
+            </div>
 
                         {/* Project Content */}
                         <div className="space-y-4">

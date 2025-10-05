@@ -1,5 +1,4 @@
 import React from 'react';
-import Education from "./Education";
 import portfolioData from '../data/portfolioData.json';
 
 function EducationList(props) {
