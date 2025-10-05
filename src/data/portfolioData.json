@@ -1,0 +1,184 @@
+{
+  "personalInfo": {
+    "name": "Ashil Poojary",
+    "title": "Full Stack Developer",
+    "experience": "2.4+ Years Experience",
+    "technologies": "Go, Node.js, React",
+    "summary": "Full Stack Developer with 2.4+ years of experience in building scalable backend systems and interactive frontends. Skilled in Go, Node.js, React, Angular, Docker, PostgreSQL, and MongoDB. Passionate about clean architecture, infrastructure, and solving complex backend challenges.",
+    "skills": [
+      "Go",
+      "Node.js", 
+      "React",
+      "Angular",
+      "Docker",
+      "PostgreSQL",
+      "MongoDB",
+      "Redis",
+      "RabbitMQ"
+    ],
+    "profileImage": "image/ashil.jpg",
+    "resumeUrl": "/Resume.pdf"
+  },
+  "contactInfo": {
+    "email": "ashilpoojary22@gmail.com",
+    "phone": "+91 9071872917",
+    "website": "ashilpoojary.netlify.app",
+    "socialLinks": [
+      {
+        "platform": "GitHub",
+        "url": "https://github.com/ashilpoojary",
+        "icon": "BsGithub",
+        "color": "hover:text-gray-300"
+      },
+      {
+        "platform": "LinkedIn", 
+        "url": "https://linkedin.com/in/ashilpoojary",
+        "icon": "BsLinkedin",
+        "color": "hover:text-blue-400"
+      },
+      {
+        "platform": "Twitter",
+        "url": "https://twitter.com/ashil_poojary", 
+        "icon": "FiTwitter",
+        "color": "hover:text-blue-400"
+      },
+      {
+        "platform": "WhatsApp",
+        "url": "https://api.whatsapp.com/send?phone=+919071872917&text=Hello%20Ashil,",
+        "icon": "ImWhatsapp",
+        "color": "hover:text-green-400",
+        "isAction": true
+      }
+    ]
+  },
+  "education": [
+    {
+      "years": "Jun 2022 - Aug 2023",
+      "course": "Master of Computer Application (MCA)",
+      "college": "St. Aloysius Institute of Management & IT",
+      "address": "Mangalore, Karnataka",
+      "status": "Completed"
+    },
+    {
+      "years": "Aug 2015 - Aug 2019", 
+      "course": "Bachelor of Computer Application (BCA)",
+      "college": "St. Aloysius College",
+      "address": "Mangalore, Karnataka",
+      "status": "Completed"
+    }
+  ],
+  "experience": [
+    {
+      "company": "Devappsys IT Solutions",
+      "position": "Software Engineer",
+      "timeline": "Present",
+      "duration": "Current",
+      "status": "Current",
+      "achievements": [
+        "Working in a fast-paced startup environment, allowing me to take ownership of projects and explore a wide range of technologies",
+        "Delivered multiple client requirements end-to-end, including planning, development, and deployment",
+        "Trained and led a team of junior developers to build and deliver core modules on time",
+        "Collaborated closely with stakeholders and product owners, managing tasks and sprints using JIRA",
+        "Contributed to enterprise systems for Carl Zeiss, including an order booking platform and complaint management system",
+        "Spearheaded the containerization of all internal projects using Docker and streamlined CI/CD pipelines",
+        "Built robust backend services and user-friendly frontends using Go, Node.js, React, and Angular"
+      ]
+    },
+    {
+      "company": "Devappsys IT Solutions",
+      "position": "Web Developer Intern", 
+      "timeline": "Apr 2023 - Oct 2023",
+      "duration": "6 months",
+      "status": "Completed",
+      "achievements": [
+        "Built responsive interfaces and improved UI/UX for ongoing projects",
+        "Supported backend team with Node.js integration and debugging",
+        "Gained hands-on experience with Agile development and CI/CD pipelines"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Carl Zeiss - Order Booking System",
+      "role": "Software Engineer",
+      "timeline": "2023 - Present",
+      "description": "Handled the complete order module including discount calculation and invoice generation for customers. Automated monthly billing and reporting workflows, reducing manual effort by the business team.",
+      "technologies": ["Go", "PostgreSQL", "React", "Docker"],
+      "code": null,
+      "link": null,
+      "status": "Enterprise",
+      "client": {
+        "name": "Carl Zeiss",
+        "logo": "image/clients/carl-zeiss-logo.png"
+      },
+      "image": "image/projects/carl-zeiss-order-system.png"
+    },
+    {
+      "title": "Carl Zeiss - Complaint Management System",
+      "role": "Software Engineer", 
+      "timeline": "2023 - Present",
+      "description": "Built a complaint registration and resolution tracking platform for client support teams. Implemented modules for complaint lifecycle, engineer assignment, and ticket resolution tracking.",
+      "technologies": ["Go", "PostgreSQL", "React", "WebSocket"],
+      "code": null,
+      "link": null,
+      "status": "Enterprise",
+      "client": {
+        "name": "Carl Zeiss",
+        "logo": "image/clients/carl-zeiss-logo.png"
+      },
+      "image": "image/projects/carl-zeiss-complaint-system.png"
+    },
+    {
+      "title": "Containerized Environment Platform",
+      "role": "Software Engineer",
+      "timeline": "2023 - Present", 
+      "description": "Architected and implemented a Docker-based platform to provision remote Linux/macOS environments. Developed backend services using Go for container orchestration and SSH access.",
+      "technologies": ["Go", "Docker", "Redis", "RabbitMQ", "WebSocket"],
+      "code": null,
+      "link": null,
+      "status": "Internal",
+      "image": "image/projects/container-platform.png"
+    },
+    {
+      "title": "Legal Conflict Resolve Management System",
+      "role": "Software Engineer",
+      "timeline": "2023",
+      "description": "Designed and built the entire frontend using React.js and Redux. Collaborated with backend team using Spring Boot APIs. Ensured seamless integration and responsive performance.",
+      "technologies": ["React", "Redux", "Spring Boot", "JavaScript"],
+      "code": null,
+      "link": null,
+      "status": "Completed",
+      "client": {
+        "name": "LegalTech Solutions",
+        "logo": "image/clients/legaltech-logo.png"
+      },
+      "image": "image/projects/legal-conflict-system.png"
+    },
+    {
+      "title": "Driving School Management System",
+      "role": "Full Stack Developer",
+      "timeline": "2022 - 2023",
+      "description": "Built both frontend and backend using the MERN stack. Developed features for class scheduling, payment tracking, and reporting. Optimized MongoDB queries for performance.",
+      "technologies": ["React", "Node.js", "MongoDB", "Express"],
+      "code": "https://github.com/ashilpoojary/MERN",
+      "link": null,
+      "status": "Completed",
+      "image": "image/projects/driving-school-system.png"
+    }
+  ],
+  "statusColors": {
+    "Live": "bg-green-500/20 text-green-400 border-green-500/30",
+    "Enterprise": "bg-purple-500/20 text-purple-400 border-purple-500/30", 
+    "Internal": "bg-blue-500/20 text-blue-400 border-blue-500/30",
+    "Completed": "bg-green-500/20 text-green-400 border-green-500/30",
+    "Current": "bg-green-500/20 text-green-400 border-green-500/30",
+    "In Development": "bg-yellow-500/20 text-yellow-400 border-yellow-500/30"
+  },
+  "theme": {
+    "primaryColor": "purple-400",
+    "secondaryColor": "blue-400", 
+    "accentColor": "purple-500",
+    "gradientFrom": "purple-500",
+    "gradientTo": "blue-500"
+  }
+}

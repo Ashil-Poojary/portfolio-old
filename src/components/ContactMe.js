@@ -1,72 +1,105 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {ImWhatsapp} from "react-icons/im";
 import {FiPhoneCall,FiTwitter} from "react-icons/fi";
 import {MdEmail} from "react-icons/md";
 import {BsLinkedin,BsGithub} from "react-icons/bs";
+import portfolioData from '../data/portfolioData.json';
 
 function ContactMe(props) {
-
+    const [hoveredItem, setHoveredItem] = useState(null);
+    const { contactInfo: contactData } = portfolioData;
 
     function whatsAppFunction() {
-        window.open(`https://api.whatsapp.com/send?phone=+919071872917&text=${encodeURIComponent('Hello Ashil, ')}`);
+        const whatsappLink = contactData.socialLinks.find(link => link.platform === 'WhatsApp');
+        if (whatsappLink) {
+            window.open(whatsappLink.url);
+        }
     }
-
 
     function emailFunction() {
-        const email="ashilpoojary22@gmail.com"
-        window.open(`mailto:${email}?subject=${encodeURIComponent('Hey Ashil  ')}`)
-
+        window.open(`mailto:${contactData.email}?subject=${encodeURIComponent('Hey Ashil  ')}`);
     }
+
+    const contactInfo = [
+        { icon: <MdEmail className="text-purple-400" size={20} />, label: "Email", value: contactData.email, action: emailFunction },
+        { icon: <FiPhoneCall className="text-purple-400" size={20} />, label: "Phone", value: contactData.phone, action: () => window.open(`tel:${contactData.phone.replace(/\D/g, '')}`) },
+        { icon: <svg className="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>, label: "Website", value: contactData.website, action: () => window.open(`https://${contactData.website}`) }
+    ];
+
+    const socialLinks = contactData.socialLinks.map(social => {
+        const iconMap = {
+            'BsGithub': <BsGithub size={24} />,
+            'BsLinkedin': <BsLinkedin size={24} />,
+            'FiTwitter': <FiTwitter size={24} />,
+            'ImWhatsapp': <ImWhatsapp size={24} />
+        };
+
+        return {
+            icon: iconMap[social.icon],
+            label: social.platform,
+            url: social.url,
+            color: social.color,
+            action: social.isAction ? whatsAppFunction : null
+        };
+    });
+
     return (
-        <div className='border-t-2 md:border-t-0 md:border-l-2 border-gray-700 px-3 py-4'>
-            <div className='text-cyan-600 text-2xl  font-mono'>
-                Contact me:
-            </div>
-            <p className='mt-2 text-gray-500 font-mono  flex '><div className='text-red-600'>Email:</div> ashilpoojary@gmail.com</p>
-            <p className='mt-2 text-gray-500 font-mono flex'><div className='text-red-600'>Phone:</div> +91 9071872917</p>
-            <p className='mt-2 text-gray-500 font-mono flex'><div className='text-red-600'>Address:</div> Mudipu kurnad, Mangalore</p>
-
-            <div className='flex  mt-3 '>
-                <div className='px-5 grid-rows-2  justify-center cursor-pointer hover:bg-orange-500 rounded-full py-2' onClick={whatsAppFunction}>
-                    <ImWhatsapp className='ml-5 text-blue-600' size={30} />
-                    <p className='  text-teal-500 font-mono'>WhatsApp</p>
-                </div>
-                <div className=' px-5 grid-rows-2  justify-center  cursor-pointer  hover:bg-orange-500 rounded-full py-2' >
-                    <a href="tel:9071872917">
-                        <FiPhoneCall className='ml-5 text-blue-600' size={30} />
-                        <p className=' px-4 text-teal-500 font-mono'>Call</p>
-                    </a>
-                </div>
-                <div className=' px-5 grid-rows-2  justify-center cursor-pointer hover:bg-orange-500 rounded-full py-2' onClick={emailFunction}>
-                    <MdEmail className='ml-5 text-blue-600' size={30} />
-                    <p className=' px-2 text-teal-500 font-mono'>Email</p>
-                </div>
-            </div>
-            <hr className='border-black mt-2'/>
-            <div>
-                <p className='text-cyan-600 font-mono'> Connect via : </p>
-                <div className='flex'>
-                    <div className='py-3 px-7 rounded-full  hover:bg-orange-500'
-                         onClick={()=>{window.open('https://github.com/P00JARY')}}>
-                        <BsGithub className='ml-3 text-blue-600' size={30}/>
-                        <p className='text-teal-500'>GitHub</p>
+        <div className="space-y-8">
+            {/* Contact Information */}
+            <div className="space-y-4">
+                {contactInfo.map((item, index) => (
+                    <div 
+                        key={item.label}
+                        className={`group flex items-center space-x-4 p-4 rounded-lg border border-white/10 hover:border-purple-500/30 transition-all duration-300 cursor-pointer`}
+                        onClick={item.action}
+                    >
+                        <div className="flex-shrink-0">
+                            {item.icon}
+                        </div>
+                        <div className="flex-1 min-w-0">
+                            <p className="text-sm font-mono text-purple-400 font-semibold">{item.label}</p>
+                            <p className="text-white/80 font-mono text-sm truncate">{item.value}</p>
+                        </div>
+                        {item.action && (
+                            <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <svg className="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                </svg>
+                            </div>
+                        )}
                     </div>
-                    <div className='py-3 px-5 rounded-full  hover:bg-orange-500'
-                         onClick={()=>{window.open('https://www.linkedin.com/in/ashil-b-s/')}}>
-                        <BsLinkedin className='ml-3 text-blue-600' size={30}/>
-                        <p className='text-teal-500'>LinkedIn</p>
-                    </div>
-
-                    <div className='py-3 px-5 rounded-full  hover:bg-orange-500'
-                         onClick={()=>{window.open('https://twitter.com/ashil_poojary')}}>
-                        <FiTwitter className='ml-3 text-blue-600    ' size={30}/>
-                        <p className='text-teal-500'>Twitter</p>
-                    </div>
-
-                </div>
+                ))}
             </div>
 
+            {/* Social Links */}
+            <div className="space-y-4">
+                <h3 className="text-lg font-bold text-white font-mono text-center">
+                    Connect With Me
+                </h3>
+                <div className="grid grid-cols-2 gap-3">
+                    {socialLinks.map((social, index) => (
+                        <div
+                            key={social.label}
+                            className={`group flex flex-col items-center space-y-2 p-4 rounded-lg border border-white/10 hover:border-purple-500/30 transition-all duration-300 cursor-pointer ${social.color}`}
+                            onClick={social.url ? () => window.open(social.url) : social.action}
+                        >
+                            <div className="text-white group-hover:scale-110 transition-transform duration-300">
+                                {social.icon}
+                            </div>
+                            <span className="text-xs font-mono text-white/70 group-hover:text-white transition-colors duration-300">
+                                {social.label}
+                            </span>
+                        </div>
+                    ))}
+                </div>
+            </div>
 
+            {/* Call to Action */}
+            <div className="text-center pt-4">
+                <p className="text-white/60 font-mono text-sm">
+                    Let's build something amazing together!
+                </p>
+            </div>
         </div>
     );
 }
